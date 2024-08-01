@@ -160,5 +160,7 @@ if uploaded_file is not None:
     filename = uploaded_file.name
     st.text(f"文件名: {filename}")
     if st.button("Check"):
-        result = check_file_new(uploaded_file, filename)
+        #result = check_file_new(uploaded_file, filename)
+        result = check_file_new(uploaded_file)
+        
         st.text_area("日志", result, height=400)
